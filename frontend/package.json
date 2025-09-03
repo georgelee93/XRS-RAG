@@ -1,7 +1,7 @@
 {
-  "name": "cheongam-chatbot",
+  "name": "eson-2.0",
   "version": "1.0.0",
-  "description": "청암챗봇 - AI 기반 문서 검색 및 채팅 시스템",
+  "description": "ESon 2.0 - AI 기반 문서 검색 및 채팅 시스템",
   "type": "module",
   "scripts": {
     "dev": "vite",
