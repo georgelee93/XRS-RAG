@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+venv_test/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+.env.local
+.env.production
+.env.test
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Reports and temporary files
+reports/
+semgrep-results.json
+
+# Database
+*.db
+*.sqlite
+
+# API Keys and secrets
+config/secrets/
+*.pem
+*.key
+cloud_run_env.yaml
+**/cloud_run_env.yaml

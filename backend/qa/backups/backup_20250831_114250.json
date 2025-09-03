@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-08-31T11:42:49.411808",
+  "assistants": [
+    {
+      "id": "asst_feQFo2C0mjyO5Y9eRKXaSEDc",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756553789,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": []
+    },
+    {
+      "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459994,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68b173daa2f4819195366799d0d0c0be"
+      ]
+    },
+    {
+      "id": "asst_8sSKSJAWAj8AAMOLDj5v6g6q",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459987,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68b173d42d688191b9219c36aed72eeb"
+      ]
+    },
+    {
+      "id": "asst_RfOhXdxXWwo5DRsAZxHO7kvW",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756285438,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68aeca57bb888191ad1aee6edb043f67"
+      ]
+    },
+    {
+      "id": "asst_arigW03URd9MXQy5FxgLAMeD",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1755083852,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68a66dd1a70c8191a351bd97c6e74c4d"
+      ]
+    }
+  ],
+  "vector_stores": [],
+  "config_state": {},
+  "recommendations": [
+    "Clean up duplicate assistants"
+  ],
+  "errors": [
+    "'AsyncBeta' object has no attribute 'vector_stores'"
+  ],
+  "keeper_assistant": {
+    "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+    "name": "\uccad\uc554 \ucc57\ubd07",
+    "created_at": 1756459994,
+    "model": "gpt-4-turbo-preview",
+    "has_file_search": true,
+    "vector_store_ids": [
+      "vs_68b173daa2f4819195366799d0d0c0be"
+    ]
+  }
+}

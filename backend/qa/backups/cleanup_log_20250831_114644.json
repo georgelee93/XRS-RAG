@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-08-31T11:46:29.251724",
+  "dry_run": false,
+  "deleted_assistants": [],
+  "deleted_vector_stores": [
+    "vs_68b39244ec6c8191a1e2f426cfd47fd7",
+    "vs_68b2e23f13988191a46ad612add02016",
+    "vs_68b173d42d688191b9219c36aed72eeb",
+    "vs_68aeca57bb888191ad1aee6edb043f67",
+    "vs_68aeca12e0ac81918d8a15bc681caa01",
+    "vs_68a66dd1a70c8191a351bd97c6e74c4d",
+    "vs_689d8f853c088191830f4a718223004a"
+  ],
+  "kept_assistant": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+  "kept_vector_store": "vs_68b173daa2f4819195366799d0d0c0be"
+}

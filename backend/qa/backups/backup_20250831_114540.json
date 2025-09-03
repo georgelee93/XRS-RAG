@@ -1,0 +1,133 @@
+{
+  "timestamp": "2025-08-31T11:45:36.070501",
+  "assistants": [
+    {
+      "id": "asst_feQFo2C0mjyO5Y9eRKXaSEDc",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756553789,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": []
+    },
+    {
+      "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459994,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68b173daa2f4819195366799d0d0c0be"
+      ]
+    },
+    {
+      "id": "asst_8sSKSJAWAj8AAMOLDj5v6g6q",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459987,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68b173d42d688191b9219c36aed72eeb"
+      ]
+    },
+    {
+      "id": "asst_RfOhXdxXWwo5DRsAZxHO7kvW",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756285438,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68aeca57bb888191ad1aee6edb043f67"
+      ]
+    },
+    {
+      "id": "asst_arigW03URd9MXQy5FxgLAMeD",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1755083852,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68a66dd1a70c8191a351bd97c6e74c4d"
+      ]
+    }
+  ],
+  "vector_stores": [
+    {
+      "id": "vs_68b39244ec6c8191a1e2f426cfd47fd7",
+      "name": null,
+      "created_at": 1756598852,
+      "file_count": 1,
+      "bytes": 1045
+    },
+    {
+      "id": "vs_68b2e23f13988191a46ad612add02016",
+      "name": null,
+      "created_at": 1756553791,
+      "file_count": 10,
+      "bytes": 3712278
+    },
+    {
+      "id": "vs_68b173daa2f4819195366799d0d0c0be",
+      "name": "Vector Store for \uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459994,
+      "file_count": 0,
+      "bytes": 0
+    },
+    {
+      "id": "vs_68b173d42d688191b9219c36aed72eeb",
+      "name": "Vector Store for \uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459988,
+      "file_count": 0,
+      "bytes": 0
+    },
+    {
+      "id": "vs_68aeca57bb888191ad1aee6edb043f67",
+      "name": "\uccad\uc554 \ucc57\ubd07 Document Store",
+      "created_at": 1756285527,
+      "file_count": 10,
+      "bytes": 3712278
+    },
+    {
+      "id": "vs_68aeca12e0ac81918d8a15bc681caa01",
+      "name": null,
+      "created_at": 1756285458,
+      "file_count": 6,
+      "bytes": 59260
+    },
+    {
+      "id": "vs_68a66dd1a70c8191a351bd97c6e74c4d",
+      "name": "\uccad\uc554 \ucc57\ubd07 Document Store",
+      "created_at": 1755737553,
+      "file_count": 6,
+      "bytes": 59260
+    },
+    {
+      "id": "vs_689d8f853c088191830f4a718223004a",
+      "name": "Vector Store for \uccad\uc554 \ucc57\ubd07",
+      "created_at": 1755156357,
+      "file_count": 0,
+      "bytes": 0
+    }
+  ],
+  "config_state": {},
+  "recommendations": [
+    "Clean up duplicate assistants",
+    "Clean up duplicate vector stores"
+  ],
+  "keeper_assistant": {
+    "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+    "name": "\uccad\uc554 \ucc57\ubd07",
+    "created_at": 1756459994,
+    "model": "gpt-4-turbo-preview",
+    "has_file_search": true,
+    "vector_store_ids": [
+      "vs_68b173daa2f4819195366799d0d0c0be"
+    ]
+  },
+  "keeper_vector_store": {
+    "id": "vs_68b173daa2f4819195366799d0d0c0be",
+    "name": "Vector Store for \uccad\uc554 \ucc57\ubd07",
+    "created_at": 1756459994,
+    "file_count": 0,
+    "bytes": 0
+  }
+}

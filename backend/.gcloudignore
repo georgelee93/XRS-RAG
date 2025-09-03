@@ -1,0 +1,42 @@
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Development
+.git/
+.gitignore
+*.log
+*.md
+tests/
+test_*.py
+pytest.ini
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local files
+.env
+.env.local
+key.json
+documents/
+archive/
+logs/
+
+# Build artifacts
+*.tar.gz
+*.zip

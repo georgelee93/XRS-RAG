@@ -1,0 +1,86 @@
+[
+  {
+    "test": "OpenAI Upload Verification",
+    "passed": true,
+    "details": "File ID: file-HAP4XFqbBgtDirdVzEyUQ7, Name: qa_test_document.txt",
+    "timestamp": "2025-08-15T15:51:34.113079"
+  },
+  {
+    "test": "Supabase Storage Verification",
+    "passed": true,
+    "details": "Skipped - Using OpenAI storage instead",
+    "timestamp": "2025-08-15T15:51:34.113089"
+  },
+  {
+    "test": "Database Record Verification",
+    "passed": true,
+    "details": "Document recorded: qa_test_document.txt",
+    "timestamp": "2025-08-15T15:51:34.183086"
+  },
+  {
+    "test": "Document Upload Flow",
+    "passed": true,
+    "details": "OpenAI: True, DB: True (Supabase storage not used)",
+    "timestamp": "2025-08-15T15:51:34.183094"
+  },
+  {
+    "test": "Chat API Connection",
+    "passed": true,
+    "details": "Response received in 8.55s",
+    "timestamp": "2025-08-15T15:51:43.764831"
+  },
+  {
+    "test": "Document Retrieval",
+    "passed": true,
+    "details": "Assistant can access uploaded document",
+    "timestamp": "2025-08-15T15:51:53.133000"
+  },
+  {
+    "test": "No Duplicate Assistants",
+    "passed": true,
+    "details": "Found 1 assistant(s)",
+    "timestamp": "2025-08-15T15:51:54.617086"
+  },
+  {
+    "test": "Vector Store Attachment",
+    "passed": true,
+    "details": "Vector store attached",
+    "timestamp": "2025-08-15T15:51:54.617107"
+  },
+  {
+    "test": "No Orphaned Vector Stores",
+    "passed": true,
+    "details": "Found 0 orphaned store(s)",
+    "timestamp": "2025-08-15T15:51:54.617111"
+  },
+  {
+    "test": "Chat Messages Logged",
+    "passed": true,
+    "details": "2 message(s) found",
+    "timestamp": "2025-08-15T15:52:05.322231"
+  },
+  {
+    "test": "Message has UUID",
+    "passed": true,
+    "details": "UUID present",
+    "timestamp": "2025-08-15T15:52:05.322241"
+  },
+  {
+    "test": "Message has Timestamp",
+    "passed": true,
+    "details": "Timestamp recorded",
+    "timestamp": "2025-08-15T15:52:05.322242"
+  },
+  {
+    "test": "Usage Tracking Logged",
+    "passed": true,
+    "details": "10 usage record(s) found",
+    "timestamp": "2025-08-15T15:52:05.322244"
+  },
+  {
+    "test": "Document Usage Logged",
+    "passed": true,
+    "details": "Document usage tracked",
+    "timestamp": "2025-08-15T15:52:05.322245"
+  }
+]

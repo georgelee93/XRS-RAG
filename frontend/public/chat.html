@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청암 챗봇 - AI 어시스턴트</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- Header -->
+  <header class="bg-white border-b border-neutral-200 fixed top-0 left-0 right-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-neutral-900 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h1 class="text-lg font-semibold">청암 챗봇</h1>
+        </div>
+        
+        <nav class="flex items-center gap-6">
+          <a href="/admin.html" class="nav-item admin-nav-item text-sm font-medium text-neutral-600 hover:text-neutral-900" style="display: none;">관리자 패널</a>
+          <div class="flex items-center gap-4">
+            <span id="userName" class="text-sm text-gray-600"></span>
+            <button id="logoutBtn" class="px-4 py-2 text-sm bg-red-600 text-white rounded hover:bg-red-700">
+              로그아웃
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="pt-16 min-h-screen flex">
+    <!-- Sidebar - Chat History -->
+    <aside class="w-80 flex-shrink-0 bg-white border-r border-neutral-200 flex flex-col">
+      <div class="p-4 border-b border-neutral-200">
+        <h2 class="text-sm font-semibold text-neutral-900 mb-3">대화 내역</h2>
+        <button class="btn-primary w-full text-sm" id="newChatBtn">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+          </svg>
+          새 대화 시작
+        </button>
+      </div>
+      
+      <div class="flex-1 p-4 overflow-y-auto">
+        <div class="space-y-2" id="conversationsList">
+          <div class="text-sm text-neutral-500">대화 내역이 없습니다</div>
+        </div>
+      </div>
+      
+      <div class="p-4 border-t border-neutral-200">
+        <div class="text-xs text-neutral-500 mb-2">시스템 정보</div>
+        <div class="text-xs text-neutral-600">
+          <div id="totalDocsCount">전체 문서: 로딩중...</div>
+          <div id="systemStatus" class="mt-1">상태: 연결중...</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="flex-1 flex flex-col min-w-0">
+      <!-- Messages Container -->
+      <div class="flex-1 overflow-y-auto" id="messagesContainer">
+        <div class="max-w-5xl mx-auto px-4 py-8">
+          <!-- Welcome Message -->
+          <div class="text-center py-16" id="welcomeMessage">
+            <div class="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-neutral-600" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M232,64H160a40,40,0,0,0-32,16A40,40,0,0,0,96,64H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V72A8,8,0,0,0,232,64ZM96,192H32V80H96a24,24,0,0,1,24,24v88A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V104a24,24,0,0,1,24-24h64Z"></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-2">청암 챗봇에 오신 것을 환영합니다</h2>
+            <p class="text-neutral-600 max-w-md mx-auto">
+              업로드된 모든 문서를 기반으로 질문하고 AI가 제공하는 지능적인 답변을 받아보세요.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3 justify-center">
+              <button class="btn-ghost text-sm" onclick="sendSampleQuestion('사용 가능한 문서는 무엇인가요?')">
+                사용 가능한 문서는 무엇인가요?
+              </button>
+              <button class="btn-ghost text-sm" onclick="sendSampleQuestion('주요 주제를 요약해주세요')">
+                주요 주제를 요약해주세요
+              </button>
+              <button class="btn-ghost text-sm" onclick="sendSampleQuestion('특정 정보를 검색해주세요')">
+                특정 정보를 검색해주세요
+              </button>
+            </div>
+          </div>
+
+          <!-- Messages will be appended here -->
+          <div id="messagesList" class="space-y-3"></div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="border-t border-neutral-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-4">
+          <form id="chatForm" class="flex items-end gap-3">
+            <div class="flex-1 relative">
+              <textarea 
+                id="messageInput"
+                placeholder="메시지를 입력하세요..."
+                class="input-field min-h-[44px] max-h-32 resize-none pr-12"
+                rows="1"
+              ></textarea>
+              <button type="button" class="absolute right-2 bottom-2 text-neutral-400 hover:text-neutral-600" id="attachBtn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M209.66,122.34a8,8,0,0,1,0,11.32l-82.05,82a56,56,0,0,1-79.2-79.21L147.67,35.73a40,40,0,1,1,56.61,56.55L105,193A24,24,0,1,1,71,159L154.3,74.38A8,8,0,1,1,165.7,85.6L82.39,170.31a8,8,0,1,0,11.27,11.36L192.93,81A24,24,0,1,0,159,47L59.76,147.68a40,40,0,1,0,56.53,56.62l82.06-82A8,8,0,0,1,209.66,122.34Z"></path>
+                </svg>
+              </button>
+            </div>
+            <button type="submit" class="btn-primary" id="sendBtn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M231.87,114l-168-95.89A16,16,0,0,0,40.92,37.34L71.55,128,40.92,218.67A16,16,0,0,0,56,240a16.15,16.15,0,0,0,7.93-2.1l167.92-96.05a16,16,0,0,0,.05-27.89ZM56,215.85,82.17,136H144a8,8,0,0,0,0-16H82.17L56,40.16l.09-.05,144,82L56.06,215.88Z"></path>
+              </svg>
+              <span class="ml-2">전송</span>
+            </button>
+          </form>
+          <div class="mt-2 text-xs text-neutral-500">
+            <span id="contextIndicator">모든 문서 검색 가능</span> • 
+            <span>Enter로 전송, Shift+Enter로 줄바꿈</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script type="module" src="/src/js/chat.js"></script>
+</body>
+</html>

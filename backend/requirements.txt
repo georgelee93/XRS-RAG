@@ -1,0 +1,47 @@
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+gunicorn==21.2.0
+pydantic-settings==2.0.3
+
+# OpenAI Integration
+openai>=1.98.0
+tiktoken==0.5.2
+
+# Supabase Integration
+supabase==2.0.0
+
+# Authentication
+PyJWT==2.8.0
+httpx==0.24.1
+
+# Document Processing
+pypdf2==3.0.1
+python-docx==1.1.0
+python-pptx==0.6.23
+openpyxl==3.1.2
+markdown==3.5.1
+
+# Async Support
+aiofiles==23.2.1
+aiohttp==3.9.1
+
+# Utilities
+python-dotenv==1.0.0
+python-dateutil==2.8.2
+structlog==23.2.0
+tenacity==8.2.3
+pyyaml==6.0.1
+
+# BigQuery Integration
+google-cloud-bigquery==3.13.0
+google-auth==2.25.2
+db-dtypes==1.2.0
+pandas==2.1.4
+
+# Development & Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.11.0 

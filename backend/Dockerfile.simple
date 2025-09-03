@@ -1,0 +1,12 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Only install FastAPI and uvicorn
+RUN pip install fastapi uvicorn
+
+# Copy the simple app
+COPY simple_main.py .
+
+# Run directly
+CMD ["python", "simple_main.py"]

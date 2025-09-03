@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-08-31T11:45:40.469207",
+  "dry_run": false,
+  "deleted_assistants": [
+    "asst_feQFo2C0mjyO5Y9eRKXaSEDc",
+    "asst_8sSKSJAWAj8AAMOLDj5v6g6q",
+    "asst_RfOhXdxXWwo5DRsAZxHO7kvW",
+    "asst_arigW03URd9MXQy5FxgLAMeD"
+  ],
+  "deleted_vector_stores": [],
+  "kept_assistant": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+  "kept_vector_store": "vs_68b173daa2f4819195366799d0d0c0be"
+}

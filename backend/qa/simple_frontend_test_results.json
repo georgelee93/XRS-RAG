@@ -1,0 +1,80 @@
+[
+  {
+    "test": "Frontend Accessible",
+    "passed": true,
+    "details": "Status 200",
+    "timestamp": "2025-08-15T17:14:36.613686"
+  },
+  {
+    "test": "HTML Check: Admin App Container",
+    "passed": true,
+    "details": "Found",
+    "timestamp": "2025-08-15T17:14:36.621476"
+  },
+  {
+    "test": "HTML Check: Document Table",
+    "passed": true,
+    "details": "Found",
+    "timestamp": "2025-08-15T17:14:36.621484"
+  },
+  {
+    "test": "HTML Check: Upload Button",
+    "passed": true,
+    "details": "Found",
+    "timestamp": "2025-08-15T17:14:36.621486"
+  },
+  {
+    "test": "HTML Check: JavaScript Import",
+    "passed": true,
+    "details": "Found",
+    "timestamp": "2025-08-15T17:14:36.621487"
+  },
+  {
+    "test": "HTML Check: API Config",
+    "passed": false,
+    "details": "Not found",
+    "timestamp": "2025-08-15T17:14:36.621488"
+  },
+  {
+    "test": "Backend API",
+    "passed": true,
+    "details": "Returns 7 documents",
+    "timestamp": "2025-08-15T17:14:37.697127"
+  },
+  {
+    "test": "CORS Configuration",
+    "passed": true,
+    "details": "Allow-Origin: http://localhost:3000",
+    "timestamp": "2025-08-15T17:14:37.753832"
+  },
+  {
+    "test": "JS File: /src/js/admin.js",
+    "passed": true,
+    "details": "Accessible and valid",
+    "timestamp": "2025-08-15T17:14:37.758667"
+  },
+  {
+    "test": "JS File: /src/js/api.js",
+    "passed": true,
+    "details": "Accessible and valid",
+    "timestamp": "2025-08-15T17:14:37.760569"
+  },
+  {
+    "test": "JS File: /src/js/config.js",
+    "passed": true,
+    "details": "Accessible and valid",
+    "timestamp": "2025-08-15T17:14:37.762106"
+  },
+  {
+    "test": "JS File: /src/js/utils.js",
+    "passed": true,
+    "details": "Accessible and valid",
+    "timestamp": "2025-08-15T17:14:37.763650"
+  },
+  {
+    "test": "API Integration Config",
+    "passed": true,
+    "details": "Config has correct backend port (8080)",
+    "timestamp": "2025-08-15T17:14:37.765172"
+  }
+]

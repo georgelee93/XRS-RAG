@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청암 챗봇 - 회원가입</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-neutral-50">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <!-- Logo -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-neutral-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">청암 챗봇</h2>
+                <p class="mt-2 text-sm text-gray-600">새 계정을 만드세요</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="mt-8 space-y-6">
+                <div class="space-y-4">
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700">이름</label>
+                        <input id="fullName" name="fullName" type="text" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="홍길동">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">이메일</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="example@email.com">
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">비밀번호</label>
+                        <input id="password" name="password" type="password" autocomplete="new-password" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="8자 이상">
+                        <p class="mt-1 text-xs text-gray-500">최소 8자, 대문자, 소문자, 숫자 포함</p>
+                    </div>
+                    <div>
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700">비밀번호 확인</label>
+                        <input id="confirmPassword" name="confirmPassword" type="password" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="비밀번호 재입력">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" id="signupButton"
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        회원가입
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-sm text-gray-600">이미 계정이 있으신가요?</span>
+                    <a href="/login.html" class="font-medium text-blue-600 hover:text-blue-500 ml-1">
+                        로그인
+                    </a>
+                </div>
+            </form>
+
+            <!-- Error/Success Messages -->
+            <div id="alertContainer" class="hidden">
+                <div id="alertMessage" class="rounded-md p-4 text-sm"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Script -->
+    <script type="module">
+        import { authService } from '/src/js/auth.js';
+        
+        const form = document.getElementById('signupForm');
+        const alertContainer = document.getElementById('alertContainer');
+        const alertMessage = document.getElementById('alertMessage');
+        const signupButton = document.getElementById('signupButton');
+
+        function showAlert(message, type = 'error') {
+            alertContainer.classList.remove('hidden');
+            alertMessage.textContent = message;
+            alertMessage.className = `rounded-md p-4 text-sm ${
+                type === 'error' 
+                    ? 'bg-red-50 text-red-800' 
+                    : 'bg-green-50 text-green-800'
+            }`;
+        }
+        
+        function validatePassword(password) {
+            const minLength = 8;
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasNumbers = /\d/.test(password);
+            
+            if (password.length < minLength) {
+                return { valid: false, message: '비밀번호는 8자 이상이어야 합니다' };
+            }
+            if (!hasUpperCase || !hasLowerCase) {
+                return { valid: false, message: '비밀번호는 대문자와 소문자를 포함해야 합니다' };
+            }
+            if (!hasNumbers) {
+                return { valid: false, message: '비밀번호는 숫자를 포함해야 합니다' };
+            }
+            
+            return { valid: true };
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                showAlert('비밀번호가 일치하지 않습니다');
+                return;
+            }
+            
+            // Validate password strength
+            const passwordValidation = validatePassword(password);
+            if (!passwordValidation.valid) {
+                showAlert(passwordValidation.message);
+                return;
+            }
+            
+            // Disable button and show loading
+            signupButton.disabled = true;
+            signupButton.textContent = '회원가입 중...';
+            
+            const result = await authService.signUp(email, password, fullName);
+            
+            if (result.success) {
+                showAlert(result.message, 'success');
+                setTimeout(() => {
+                    window.location.href = '/login.html';
+                }, 2000);
+            } else {
+                showAlert(result.error || '회원가입에 실패했습니다');
+                signupButton.disabled = false;
+                signupButton.textContent = '회원가입';
+            }
+        });
+    </script>
+</body>
+</html>

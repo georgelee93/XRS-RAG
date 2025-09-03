@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Local data
+data/
+logs/
+*.log
+*.db
+*.sqlite
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+test_*.py
+tests/
+pytest.ini
+
+# Documentation
+*.md
+docs/
+README.md
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp# Cache bust: Wed Aug  6 17:05:12 KST 2025

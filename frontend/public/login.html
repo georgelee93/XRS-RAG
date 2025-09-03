@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청암 챗봇 - 로그인</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-neutral-50">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <!-- Logo -->
+            <div class="text-center">
+                <div class="w-16 h-16 bg-neutral-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">청암 챗봇</h2>
+                <p class="mt-2 text-sm text-gray-600">계정에 로그인하세요</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <label for="email" class="sr-only">이메일</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required 
+                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="이메일 주소">
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">비밀번호</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required 
+                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               placeholder="비밀번호">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember" name="remember" type="checkbox" 
+                               class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="remember" class="ml-2 block text-sm text-gray-900">
+                            로그인 상태 유지
+                        </label>
+                    </div>
+
+                    <div class="text-sm">
+                        <a href="#" id="forgotPassword" class="font-medium text-blue-600 hover:text-blue-500">
+                            비밀번호를 잊으셨나요?
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" id="loginButton"
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        로그인
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-sm text-gray-600">계정이 없으신가요?</span>
+                    <a href="/signup.html" class="font-medium text-blue-600 hover:text-blue-500 ml-1">
+                        회원가입
+                    </a>
+                </div>
+            </form>
+
+            <!-- Error/Success Messages -->
+            <div id="alertContainer" class="hidden">
+                <div id="alertMessage" class="rounded-md p-4 text-sm"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Script -->
+    <script type="module" src="/src/js/pages/login.js"></script>
+</body>
+</html>

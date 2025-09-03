@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-08-31T12:00:09.012787",
+  "assistants": [
+    {
+      "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+      "name": "\uccad\uc554 \ucc57\ubd07",
+      "created_at": 1756459994,
+      "model": "gpt-4-turbo-preview",
+      "has_file_search": true,
+      "vector_store_ids": [
+        "vs_68b173daa2f4819195366799d0d0c0be"
+      ]
+    }
+  ],
+  "vector_stores": [],
+  "config_state": {
+    "assistant_id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+    "vector_store_id": "vs_68b173daa2f4819195366799d0d0c0be",
+    "created_at": "2025-08-31T11:45:43.187553",
+    "last_updated": "2025-08-31T11:46:44.997474",
+    "last_cleanup": "2025-08-31T11:46:44.997476"
+  },
+  "recommendations": [
+    "Update config with valid vector store ID"
+  ],
+  "errors": [
+    ""
+  ],
+  "keeper_assistant": {
+    "id": "asst_NJpDMgWhBQtqoj2oZC5noJDU",
+    "name": "\uccad\uc554 \ucc57\ubd07",
+    "created_at": 1756459994,
+    "model": "gpt-4-turbo-preview",
+    "has_file_search": true,
+    "vector_store_ids": [
+      "vs_68b173daa2f4819195366799d0d0c0be"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청암 챗봇</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- Landing Page -->
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-neutral-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h1 class="text-xl font-semibold">청암 챗봇</h1>
+          </div>
+          <nav class="flex items-center gap-6">
+            <a href="/chat.html" class="btn-ghost">채팅</a>
+            <a href="/admin.html" class="btn-primary">관리자 대시보드</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-1 flex items-center justify-center px-4">
+      <div class="max-w-4xl mx-auto text-center py-20">
+        <h2 class="text-5xl font-bold text-neutral-900 mb-6">
+          지능형 문서 검색 & 채팅
+        </h2>
+        <p class="text-xl text-neutral-600 mb-12 max-w-2xl mx-auto">
+          문서를 업로드하고 고급 AI가 제공하는 즉각적이고 정확한 답변을 받아보세요.
+          지식 베이스, 문서화, 연구에 적합합니다.
+        </p>
+        
+        <div class="flex gap-4 justify-center mb-16">
+          <a href="/chat.html" class="btn-primary text-lg px-8 py-3">
+            채팅 시작하기
+            <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+            </svg>
+          </a>
+          <a href="/admin.html" class="btn-secondary text-lg px-8 py-3">
+            문서 관리
+          </a>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+          <div class="bg-white rounded-xl p-6 border border-neutral-200">
+            <div class="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-neutral-700" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M240,136v64a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V136a16,16,0,0,1,16-16H80a8,8,0,0,1,0,16H32v64H224V136H176a8,8,0,0,1,0-16h48A16,16,0,0,1,240,136ZM85.66,77.66,120,43.31V128a8,8,0,0,0,16,0V43.31l34.34,34.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,77.66ZM200,168a12,12,0,1,0-12,12A12,12,0,0,0,200,168Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">간편한 업로드</h3>
+            <p class="text-neutral-600">
+              문서를 드래그 앤 드롭하세요. PDF, DOCX, TXT 등 다양한 형식을 지원합니다.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-neutral-200">
+            <div class="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-neutral-700" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">스마트 검색</h3>
+            <p class="text-neutral-600">
+              AI 기반 시맨틱 검색이 원하는 것을 정확히 찾아드립니다.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-neutral-200">
+            <div class="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-neutral-700" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M232,64H160a40,40,0,0,0-32,16A40,40,0,0,0,96,64H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V72A8,8,0,0,0,232,64ZM96,192H32V80H96a24,24,0,0,1,24,24v88A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V104a24,24,0,0,1,24-24h64Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">맥락 기반 채팅</h3>
+            <p class="text-neutral-600">
+              문서의 출처 참조와 함께 정확한 답변을 받을 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-200 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center text-sm text-neutral-600">
+          <p>OpenAI Retrieval API와 ChatGPT로 구동</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
