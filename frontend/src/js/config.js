@@ -10,10 +10,10 @@ export const API_CONFIG = {
   timeout: 120000, // 120 seconds (2 minutes) - increased for complex document searches
 };
 
-// Supabase Configuration - Updated with new project
+// Supabase Configuration - Replace with your actual values
 export const SUPABASE_CONFIG = {
-  url: 'https://utowhepyocvkjqtxdsnj.supabase.co',
-  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV0b3doZXB5b2N2a2pxdHhkc25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3ODQyMjAsImV4cCI6MjA3MjM2MDIyMH0.K6SXf_2Wn3yPD813HrX2h2py50G_fW5Put3s3ymOC1M'
+  url: 'your_supabase_url_here',
+  anonKey: 'your_supabase_anon_key_here'
 };
 
 // Document Types

@@ -17,9 +17,9 @@ async def get_auth_token() -> Optional[str]:
     Get authentication token from Supabase
     Returns the access token or None if authentication fails
     """
-    # Supabase URL and anon key - Updated with new Supabase project
-    supabase_url = "https://utowhepyocvkjqtxdsnj.supabase.co"
-    supabase_anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV0b3doZXB5b2N2a2pxdHhkc25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3ODQyMjAsImV4cCI6MjA3MjM2MDIyMH0.K6SXf_2Wn3yPD813HrX2h2py50G_fW5Put3s3ymOC1M"
+    # Supabase URL and anon key - Replace with your test values
+    supabase_url = "your_test_supabase_url_here"
+    supabase_anon_key = "your_test_supabase_anon_key_here"
     
     async with aiohttp.ClientSession() as session:
         try:
